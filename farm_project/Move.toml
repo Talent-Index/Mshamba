@@ -3,5 +3,9 @@ name = "farm_investment"
 version = "0.0.1"
 edition = "2024.beta"
 
+[addresses]
+# Replace vest with your Sui address
+vest = "0x43b258bfe73c34475a86c57f60a394df98bc601111586af03c73e87dc80dd835"
+
 [dependencies]
 Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/mainnet" }
