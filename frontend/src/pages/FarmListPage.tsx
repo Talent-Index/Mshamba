@@ -1,9 +1,9 @@
-
 import React from 'react';
 import { useSuiClient } from '@mysten/dapp-kit';
 import { useQuery } from '@tanstack/react-query';
 import { PACKAGE_ID } from '../constants';
 import { Link } from 'react-router-dom';
+import './FarmListPage.css';
 
 interface FarmObject {
   data: {
@@ -61,7 +61,7 @@ const FarmListPage: React.FC = () => {
   if (error) return <div>Error loading farms: {error.message}</div>;
 
   return (
-    <div>
+    <div className="farm-list-container">
       <h2>All Farms</h2>
       {farms && farms.length > 0 ? (
         <ul>
@@ -77,7 +77,7 @@ const FarmListPage: React.FC = () => {
           ))}
         </ul>
       ) : (
-        <p>No farms found. Be the first to create one!</p>
+        <p className="no-farms-message">No farms found. Be the first to create one!</p>
       )}
     </div>
   );

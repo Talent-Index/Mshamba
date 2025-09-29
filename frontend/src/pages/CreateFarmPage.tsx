@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { useSignAndExecuteTransaction, useCurrentAccount } from '@mysten/dapp-kit';
 import { Transaction } from '@mysten/sui/transactions';
 import { PACKAGE_ID } from '../constants';
+import './CreateFarmPage.css';
 
 const CreateFarmPage: React.FC = () => {
   const currentAccount = useCurrentAccount();
-  const { mutate: signAndExecute } = useSignAndExecuteTransactionBlock();
+  const { mutate: signAndExecute } = useSignAndExecuteTransaction();
   const [isCreating, setIsCreating] = useState(false);
 
   const handleCreateFarm = async () => {
@@ -47,13 +48,13 @@ const CreateFarmPage: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="create-farm-container">
       <h2>Create New Farm</h2>
-      <p>Click the button below to create your new Mshamba Farm.</p>
+      <p>Click the button below to create your new Tokeni Kwa Shamba Farm.</p>
       <button onClick={handleCreateFarm} disabled={!currentAccount || isCreating}>
         {isCreating ? "Creating..." : "Create Farm"}
       </button>
-      {!currentAccount && <p>Connect your wallet to create a farm.</p>}
+      {!currentAccount && <p className="connect-wallet-message">Connect your wallet to create a farm.</p>}
     </div>
   );
 };

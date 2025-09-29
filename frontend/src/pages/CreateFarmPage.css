@@ -1,0 +1,50 @@
+
+.create-farm-container {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent dark background */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(128, 0, 128, 0.4); /* Purple glow */
+  margin-top: 20px;
+  text-align: center;
+  color: #e0e0e0;
+}
+
+.create-farm-container h2 {
+  color: #bf40bf; /* Vibrant purple for heading */
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(191, 64, 191, 0.7);
+}
+
+.create-farm-container p {
+  font-size: 1.1em;
+  margin-bottom: 25px;
+}
+
+.create-farm-container button {
+  background-color: #bf40bf; /* Vibrant purple button */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.create-farm-container button:hover {
+  background-color: #9370db; /* Darker purple on hover */
+  box-shadow: 0 0 15px rgba(191, 64, 191, 0.7);
+}
+
+.create-farm-container button:disabled {
+  background-color: #5a5a7a;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.create-farm-container .connect-wallet-message {
+  color: #e0e0e0;
+  font-size: 1em;
+  margin-top: 20px;
+}

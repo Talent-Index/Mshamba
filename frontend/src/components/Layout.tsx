@@ -13,7 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <div className="layout-container">
       <header className="layout-header">
         <nav className="navbar">
-          <Link to="/" className="nav-brand">Mshamba Farm</Link>
+          <Link to="/" className="nav-brand">Tokeni Kwa Shamba</Link>
           <div className="nav-links">
             <Link to="/farms" className="nav-item">My Farms</Link>
             <Link to="/create-farm" className="nav-item">Create Farm</Link>
@@ -27,7 +27,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {children}
       </main>
       <footer className="layout-footer">
-        <p>&copy; 2025 Mshamba Farm</p>
+        <p>&copy; 2025 Tokeni Kwa Shamba</p>
       </footer>
     </div>
   );

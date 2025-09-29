@@ -5,10 +5,10 @@
 }
 
 .layout-header {
-  background-color: #4CAF50;
+  background-color: #2a2a4a; /* Deep indigo */
   color: white;
   padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(128, 0, 128, 0.4); /* Subtle purple glow */
 }
 
 .navbar {
@@ -35,10 +35,12 @@
   color: white;
   text-decoration: none;
   font-size: 1.1em;
+  transition: color 0.3s ease;
 }
 
 .nav-item:hover {
-  text-decoration: underline;
+  color: #bf40bf; /* Vibrant purple */
+  text-decoration: none;
 }
 
 .wallet-connect {
@@ -50,10 +52,15 @@
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  background: radial-gradient(circle at center, rgba(42, 42, 74, 0.5) 0%, rgba(26, 26, 46, 0.8) 100%);
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(128, 0, 128, 0.3);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .layout-footer {
-  background-color: #333;
+  background-color: #2a2a4a; /* Deep indigo */
   color: white;
   text-align: center;
   padding: 10px 20px;

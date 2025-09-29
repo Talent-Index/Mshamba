@@ -1,10 +1,10 @@
-
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSuiClient, useSignAndExecuteTransaction, useCurrentAccount } from '@mysten/dapp-kit';
 import { useQuery } from '@tanstack/react-query';
 import { Transaction } from '@mysten/sui/transactions';
 import { PACKAGE_ID } from '../constants';
+import './FarmDetailsPage.css';
 
 interface FarmObjectData {
   objectId: string;
@@ -181,12 +181,12 @@ const FarmDetailsPage: React.FC = () => {
     );
   };
 
-  if (isLoading) return <div>Loading farm details...</div>;
-  if (error) return <div>Error loading farm: {error.message}</div>;
-  if (!farm) return <div>Farm not found.</div>;
+  if (isLoading) return <div className="message">Loading farm details...</div>;
+  if (error) return <div className="message error-message">Error loading farm: {error.message}</div>;
+  if (!farm) return <div className="message">Farm not found.</div>;
 
   return (
-    <div>
+    <div className="farm-details-container">
       <h2>Farm Details: {farm.objectId}</h2>
       <p><strong>Farmer:</strong> {farm.content.fields.farmer}</p>
       <p><strong>Total Invested:</strong> {parseInt(farm.content.fields.total_invested) / 1_000_000_000} SUI</p>
