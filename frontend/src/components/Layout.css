@@ -1,0 +1,61 @@
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout-header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-brand {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.nav-item:hover {
+  text-decoration: underline;
+}
+
+.wallet-connect {
+  /* Styling for the connect button if needed */
+}
+
+.layout-main {
+  flex-grow: 1;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.layout-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
