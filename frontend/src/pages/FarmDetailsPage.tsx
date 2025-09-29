@@ -1,9 +1,9 @@
 
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { useSuiClient, useSignAndExecuteTransactionBlock, useCurrentAccount } from '@mysten/dapp-kit';
+import { useSuiClient, useSignAndExecuteTransaction, useCurrentAccount } from '@mysten/dapp-kit';
 import { useQuery } from '@tanstack/react-query';
-import { TransactionBlock } from '@mysten/sui/transactions';
+import { Transaction } from '@mysten/sui/transactions';
 import { PACKAGE_ID } from '../constants';
 
 interface FarmObjectData {
@@ -65,8 +65,7 @@ const FarmDetailsPage: React.FC = () => {
       return;
     }
 
-    const txb = new TransactionBlock();
-    const [coin] = txb.splitCoins(txb.gas, [txb.pure(parseFloat(investAmount) * 1_000_000_000)]); // Convert to MIST
+    const txb = new Transaction();
 
     txb.moveCall({
       target: `${PACKAGE_ID}::farm::invest`,
@@ -78,7 +77,7 @@ const FarmDetailsPage: React.FC = () => {
 
     signAndExecute(
       {
-        transactionBlock: txb,
+        transaction: txb,
       },
       {
         onSuccess: (result) => {
@@ -106,8 +105,7 @@ const FarmDetailsPage: React.FC = () => {
       return;
     }
 
-    const txb = new TransactionBlock();
-    const [coin] = txb.splitCoins(txb.gas, [txb.pure(parseFloat(profitAmount) * 1_000_000_000)]); // Convert to MIST
+    const txb = new Transaction();
 
     txb.moveCall({
       target: `${PACKAGE_ID}::farm::add_profit`,
@@ -119,7 +117,7 @@ const FarmDetailsPage: React.FC = () => {
 
     signAndExecute(
       {
-        transactionBlock: txb,
+        transaction: txb,
       },
       {
         onSuccess: (result) => {
@@ -155,7 +153,7 @@ const FarmDetailsPage: React.FC = () => {
       return;
     }
 
-    const txb = new TransactionBlock();
+    const txb = new Transaction();
 
     txb.moveCall({
       target: `${PACKAGE_ID}::farm::distribute`,
@@ -167,7 +165,7 @@ const FarmDetailsPage: React.FC = () => {
 
     signAndExecute(
       {
-        transactionBlock: txb,
+        transaction: txb,
       },
       {
         onSuccess: (result) => {

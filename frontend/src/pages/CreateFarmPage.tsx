@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useSignAndExecuteTransactionBlock, useCurrentAccount } from '@mysten/dapp-kit';
-import { TransactionBlock } from '@mysten/sui/transactions';
+import { useSignAndExecuteTransaction, useCurrentAccount } from '@mysten/dapp-kit';
+import { Transaction } from '@mysten/sui/transactions';
 import { PACKAGE_ID } from '../constants';
 
 const CreateFarmPage: React.FC = () => {
@@ -19,7 +19,7 @@ const CreateFarmPage: React.FC = () => {
     }
 
     setIsCreating(true);
-    const txb = new TransactionBlock();
+    const txb = new Transaction();
 
     txb.moveCall({
       target: `${PACKAGE_ID}::farm::create_farm`,
@@ -28,7 +28,7 @@ const CreateFarmPage: React.FC = () => {
 
     signAndExecute(
       {
-        transactionBlock: txb,
+        transaction: txb,
       },
       {
         onSuccess: (result) => {
