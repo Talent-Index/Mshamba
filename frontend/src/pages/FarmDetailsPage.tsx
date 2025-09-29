@@ -34,9 +34,9 @@ const FarmDetailsPage: React.FC = () => {
   const [profitAmount, setProfitAmount] = useState('');
   const [platformAddress, setPlatformAddress] = useState('0x0'); // Placeholder for platform address
 
-  const { data: farm, isLoading, error, refetch } = useQuery<FarmObjectData>(
-    ['farm', id],
-    async () => {
+  const { data: farm, isLoading, error, refetch } = useQuery<FarmObjectData>({
+    queryKey: ['farm', id],
+    queryFn: async () => {
       if (!id) throw new Error("Farm ID is missing.");
       if (!PACKAGE_ID || PACKAGE_ID === "YOUR_PACKAGE_ID_HERE") {
         throw new Error("Please replace YOUR_PACKAGE_ID_HERE in src/constants.ts with your actual package ID.");
@@ -52,11 +52,9 @@ const FarmDetailsPage: React.FC = () => {
       }
       throw new Error("Farm not found or invalid object type.");
     },
-    {
-      enabled: !!id, // Only run query if id is available
-      refetchInterval: 5000,
-    }
-  );
+    enabled: !!id, // Only run query if id is available
+    refetchInterval: 5000,
+  });
 
   const handleInvest = async () => {
     if (!currentAccount || !farm) return;

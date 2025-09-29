@@ -29,9 +29,9 @@ interface FarmObject {
 const FarmListPage: React.FC = () => {
   const suiClient = useSuiClient();
 
-  const { data: farms, isLoading, error } = useQuery<FarmObject[]>(
-    ['farms'],
-    async () => {
+  const { data: farms, isLoading, error } = useQuery<FarmObject[]>({ 
+    queryKey: ['farms'],
+    queryFn: async () => {
       if (!PACKAGE_ID || PACKAGE_ID === "YOUR_PACKAGE_ID_HERE") {
         throw new Error("Please replace YOUR_PACKAGE_ID_HERE in src/constants.ts with your actual package ID.");
       }
@@ -51,11 +51,8 @@ const FarmListPage: React.FC = () => {
 
       return validFarms;
     },
-    {
-      // Refetch every 5 seconds
-      refetchInterval: 5000,
-    }
-  );
+    refetchInterval: 5000,
+  });
 
   if (isLoading) return <div>Loading farms...</div>;
   if (error) return <div>Error loading farms: {error.message}</div>;
