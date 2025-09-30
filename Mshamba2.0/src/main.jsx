@@ -11,6 +11,7 @@ import "@suiet/wallet-kit/style.css"; // <- required styles
 import Explore from './components/pages/Explore.jsx'
 import Navbar from './components/Navbar/Navbar.jsx'
 import FarmerDashboard from './components/pages/Farmer/FarmerDashboard.jsx'
+import InvestorDashboard from './components/pages/Investor/InvestorDashboard.jsx'
 const Layout = () => {
   return (
     <div>
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
 {
   path: "/farmer-dashboard",
   element: <FarmerDashboard/>
+},
+{
+  path: "/investor-dashboard",
+  element: <InvestorDashboard/>
 }
     ]
   }

@@ -46,6 +46,13 @@ const Navbar = () => {
           >
             Become Investor
           </button>
+          
+<button 
+  className={`nav-link ${isActive('/investor-dashboard') ? 'active' : ''}`}
+  onClick={() => navigate('/investor-dashboard')}
+>
+  My Portfolio
+</button>
         </div>
 
         {/* Wallet Connection - Right */}
