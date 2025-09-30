@@ -6,4 +6,31 @@ export const NETWORK = 'testnet';
 // After calling create_farm once, copy the shared object's ID here or load it dynamically.
 export const DEFAULT_FARM_ID = '';
 
+// App Configuration
+export const APP_CONFIG = {
+  name: 'Mshamba',
+  description: 'Decentralized Farming Platform',
+  version: '1.0.0'
+};
 
+// Role Types
+export const ROLES = {
+  ADMIN: 'admin',
+  FARMER: 'farmer',
+  INVESTOR: 'investor'
+};
+
+// Farm Status
+export const FARM_STATUS = {
+  SEEKING_FUNDING: 'seeking_funding',
+  FUNDED: 'funded',
+  ACTIVE: 'active',
+  COMPLETED: 'completed'
+};
+
+// Investment Status
+export const INVESTMENT_STATUS = {
+  PENDING: 'pending',
+  APPROVED: 'approved',
+  REJECTED: 'rejected'
+};

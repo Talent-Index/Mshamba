@@ -1,8 +1,11 @@
-
 module shambat::farm {
-    use sui::balance;
-    use sui::coin;
+    use sui::balance::{Self, Balance};
+    use sui::coin::{Self, Coin};
+    use sui::object::{Self, UID};
     use sui::sui::SUI;
+    use sui::transfer;
+    use sui::tx_context::{Self, TxContext};
+    use std::vector;
 
     /// Investor record
     public struct Investor has store, drop {
@@ -16,15 +19,17 @@ module shambat::farm {
         farmer: address,
         investors: vector<Investor>,
         total_invested: u64,
-        vault: balance::Balance<SUI>,
+        vault: Balance<SUI>,
+        is_open_for_investment: bool,
     }
 
     /// Error codes
     const ENotFarmer: u64 = 0;
     const ENoInvestors: u64 = 1;
     const EZeroAmount: u64 = 2;
+    const EInvestmentNotOpen: u64 = 3;
 
-    /// Create a new farm
+    /// Create a new farm. It is not open for investment until launched.
     public fun create_farm(ctx: &mut TxContext) {
         let farmer_addr = tx_context::sender(ctx);
         let farm = Farm {
@@ -33,12 +38,22 @@ module shambat::farm {
             investors: vector::empty<Investor>(),
             total_invested: 0,
             vault: balance::zero<SUI>(),
+            is_open_for_investment: false,
         };
         transfer::share_object(farm);
     }
 
-    /// Allow anyone to invest in the farm
-    public fun invest(farm: &mut Farm, coin_in: coin::Coin<SUI>, ctx: &mut TxContext) {
+    /// Farmer can launch the investment period, making the farm ready to accept investments.
+    public fun launch_investment(farm: &mut Farm, ctx: &mut TxContext) {
+        let farmer_addr = tx_context::sender(ctx);
+        assert!(farm.farmer == farmer_addr, ENotFarmer);
+        farm.is_open_for_investment = true;
+    }
+
+    /// Allow anyone to invest in the farm, if it's open for investment.
+    public fun invest(farm: &mut Farm, coin_in: Coin<SUI>, ctx: &mut TxContext) {
+        assert!(farm.is_open_for_investment, EInvestmentNotOpen);
+        
         let investor_addr = tx_context::sender(ctx);
         let amount = coin::value(&coin_in);
         
@@ -55,7 +70,7 @@ module shambat::farm {
     }
 
     /// Farmer can add profit to the farm
-    public fun add_profit(farm: &mut Farm, profit_coin: coin::Coin<SUI>, ctx: &mut TxContext) {
+    public fun add_profit(farm: &mut Farm, profit_coin: Coin<SUI>, ctx: &mut TxContext) {
         let farmer_addr = tx_context::sender(ctx);
         assert!(farm.farmer == farmer_addr, ENotFarmer);
         
@@ -103,8 +118,9 @@ module shambat::farm {
             i = i + 1;
         };
 
-        // Reset for next round
+        // Reset for next round and close for investment
         farm.investors = vector::empty<Investor>();
         farm.total_invested = 0;
+        farm.is_open_for_investment = false;
     }
 }
