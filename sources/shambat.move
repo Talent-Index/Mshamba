@@ -1,11 +1,8 @@
 module shambat::farm {
     use sui::balance::{Self, Balance};
     use sui::coin::{Self, Coin};
-    use sui::object::{Self, UID};
     use sui::sui::SUI;
-    use sui::transfer;
-    use sui::tx_context::{Self, TxContext};
-    use std::vector;
+
 
     /// Investor record
     public struct Investor has store, drop {
