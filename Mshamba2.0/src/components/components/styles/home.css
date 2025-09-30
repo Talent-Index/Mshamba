@@ -1,6 +1,6 @@
 .homebox{
   width: 100%;
-  border: 2px solid white;
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
