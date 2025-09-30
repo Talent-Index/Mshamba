@@ -1,0 +1,68 @@
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout-header {
+  background-color: #2a2a4a; /* Deep indigo */
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 8px rgba(128, 0, 128, 0.4); /* Subtle purple glow */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-brand {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: #bf40bf; /* Vibrant purple */
+  text-decoration: none;
+}
+
+.wallet-connect {
+  /* Styling for the connect button if needed */
+}
+
+.layout-main {
+  flex-grow: 1;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: radial-gradient(circle at center, rgba(42, 42, 74, 0.5) 0%, rgba(26, 26, 46, 0.8) 100%);
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(128, 0, 128, 0.3);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.layout-footer {
+  background-color: #2a2a4a; /* Deep indigo */
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 20px;
+}

@@ -1,0 +1,22 @@
+
+.homepage-container {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent dark background */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(128, 0, 128, 0.5); /* Purple glow */
+  margin-top: 40px;
+}
+
+.homepage-container h2 {
+  color: #bf40bf; /* Vibrant purple for heading */
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(191, 64, 191, 0.7); /* Subtle text glow */
+}
+
+.homepage-container p {
+  color: #e0e0e0; /* Light text for readability */
+  font-size: 1.2em;
+  line-height: 1.6;
+}

@@ -1,0 +1,59 @@
+
+.farm-list-container {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent dark background */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(128, 0, 128, 0.4); /* Purple glow */
+  margin-top: 20px;
+}
+
+.farm-list-container h2 {
+  color: #bf40bf; /* Vibrant purple for heading */
+  font-size: 2em;
+  margin-bottom: 25px;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(191, 64, 191, 0.7);
+}
+
+.farm-list-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.farm-list-container li {
+  background-color: rgba(42, 42, 74, 0.7); /* Darker background for list items */
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.farm-list-container li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(191, 64, 191, 0.6); /* Enhanced purple glow on hover */
+}
+
+.farm-list-container li a {
+  text-decoration: none;
+  color: #e0e0e0; /* Light text for farm details */
+  display: block;
+}
+
+.farm-list-container li h3 {
+  color: #9370db; /* Medium purple for farm ID */
+  font-size: 1.3em;
+  margin-bottom: 5px;
+}
+
+.farm-list-container li p {
+  font-size: 0.95em;
+  color: #cccccc;
+  margin-bottom: 3px;
+}
+
+.farm-list-container .no-farms-message {
+  text-align: center;
+  color: #e0e0e0;
+  font-size: 1.1em;
+  padding: 20px;
+}
