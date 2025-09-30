@@ -10,6 +10,7 @@ import { WalletProvider } from "@suiet/wallet-kit";
 import "@suiet/wallet-kit/style.css"; // <- required styles
 import Explore from './components/pages/Explore.jsx'
 import Navbar from './components/Navbar/Navbar.jsx'
+import FarmerDashboard from './components/pages/Farmer/FarmerDashboard.jsx'
 const Layout = () => {
   return (
     <div>
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
 },{
   path:"/home",
   element:<Explore/>
+},
+{
+  path: "/farmer-dashboard",
+  element: <FarmerDashboard/>
 }
     ]
   }
