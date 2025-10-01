@@ -62,18 +62,7 @@
     margin: 0;
   }
   
-  .wallet-info {
-    background: #dbeafe;
-    padding: 8px 16px;
-    border-radius: 20px;
-  }
-  
-  .wallet-address {
-    font-family: 'Courier New', monospace;
-    font-weight: 600;
-    color: #1e40af;
-    font-size: 0.9rem;
-  }
+ 
   
   /* Portfolio Overview */
   .portfolio-overview {

@@ -91,6 +91,7 @@
   gap: 0.75rem;
   flex-shrink: 0;
   min-width: fit-content;
+  flex-direction: column;
 }
 /* Wallet container */
 .wkit-connected-container {
@@ -158,19 +159,19 @@
 }
 
 /* Wallet Info Box */
-.wallet-info {
-  background-color: #f1f8e9;
-  color: #2e7d32;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-.wallet-address {
-  font-family: "Courier New", monospace;
-  white-space: nowrap;
-}
+ .wallet-info {
+    background: #dbeafe;
+    padding: 8px 16px;
+    border-radius: 20px;
+   
+  }
+  
+  .wallet-address {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    color: #1e40af;
+    font-size: 0.9rem;
+  }
 
 /* Mobile Menu Button */
 .mobile-menu-btn {

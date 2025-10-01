@@ -81,13 +81,13 @@ const Navbar = () => {
         {/* Wallet connection visible only on desktop */}
        <div className="nav-wallet">
           <ConnectButton className="my-custom-class" />
-          {/*{account && (
+          {account && (
             <div className="wallet-info">
               <span className="wallet-address">
                 {account.address.slice(0, 6)}...{account.address.slice(-4)}
               </span>
             </div>
-          )}*/}
+          )}
         </div>
       </div>
     </nav>
