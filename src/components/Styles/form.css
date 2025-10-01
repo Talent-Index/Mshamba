@@ -1,0 +1,172 @@
+.form-container {
+  max-width: 650px;
+  width: 95%;
+  margin: 40px auto;
+  padding: 2.2rem;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  animation: fadeIn 0.4s ease-in-out;
+  border: 1px solid #e6e6e6;
+}
+
+.form-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #1b5e20;
+}
+
+.form-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+.form-description .highlight{
+  color: orange;
+  font-weight: 800;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+form input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+  background: #fafafa;
+}
+
+form input:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 8px rgba(46, 125, 50, 0.25);
+  background: #ffffff;
+  outline: none;
+}
+
+/* Wallet Section */
+.wallet-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f5f9ff, #ebf5ff);
+  align-items: center;
+}
+
+.wallet-section button {
+  background: linear-gradient(135deg, #1976d2, #0d47a1) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+  padding: 10px 16px !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.wallet-section button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(25, 118, 210, 0.3);
+}
+
+.wallet-address {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #2e7d32;
+  word-break: break-all;
+  text-align: center;
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:disabled {
+  background: #a5d6a7;
+  cursor: not-allowed;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #1b5e20, #2e7d32);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(46, 125, 50, 0.25);
+}
+
+/* Transaction Guide */
+.transaction-guide {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.transaction-guide h4 {
+  margin-bottom: 10px;
+  color: #0369a1;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.transaction-guide ul {
+  margin: 0 0 10px 0;
+  padding-left: 20px;
+}
+
+.transaction-guide li {
+  margin: 6px 0;
+  color: #0c4a6e;
+}
+
+.transaction-guide .note {
+  background: #fff8e1;
+  border: 1px solid #ffecb3;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin: 0;
+  color: #b45309;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 1.3rem;
+  }
+
+  .form-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}

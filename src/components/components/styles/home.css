@@ -1,0 +1,146 @@
+/* home.css */
+
+/* Container */
+.homebox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, #e0f7e9, #ffffff);
+  min-height: 90vh;
+}
+
+/* Left Section */
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.left .ID h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.left .ID span {
+  color: #ff9800; /* orange */
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* CTA Buttons */
+.CTAs {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.CTAs button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.CTAs button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Primary Button */
+.CTAs button.cta-btn {
+  background-color: #4caf50; /* green */
+  color: white;
+}
+
+.CTAs button.cta-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+/* Secondary Button */
+.CTAs button:nth-child(2) {
+  background-color: transparent;
+  border: 2px solid #4caf50;
+  color: #4caf50;
+}
+
+.CTAs button:nth-child(2):hover {
+  background-color: #4caf50;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Right Section - Image */
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 30px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.right img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .homebox {
+    gap: 2rem;
+    padding: 3rem 2rem;
+  }
+
+  .left .ID h1 {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .homebox {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .left {
+    align-items: center;
+  }
+
+  .CTAs {
+    justify-content: center;
+  }
+
+  .right img {
+    max-width: 90%;
+    height: auto;
+  }
+}
