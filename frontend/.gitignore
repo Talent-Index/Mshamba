@@ -7,20 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Dependencies
 node_modules
-
-# Build outputs
 dist
 dist-ssr
-build/*
-
-# Local overrides
 *.local
-
-# Coverage and tracing
-.trace
-.coverage*
 
 # Editor directories and files
 .vscode/*

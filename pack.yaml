@@ -1,0 +1,1 @@
+Error executing ExecutionError: ExecutionError { inner: ExecutionErrorInner { kind: SuiMoveVerificationError, source: Some("Invalid entry point parameter type. Expected primitive or object type. Got: &signer"), command: None } }

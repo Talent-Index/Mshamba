@@ -1,0 +1,103 @@
+
+.farm-details-container {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent dark background */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(128, 0, 128, 0.4); /* Purple glow */
+  margin-top: 20px;
+  color: #e0e0e0; /* Light text color for the container */
+}
+
+.farm-details-container h2 {
+  color: #bf40bf; /* Vibrant purple for main heading */
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(191, 64, 191, 0.7);
+}
+
+.farm-details-container h3 {
+  color: #9370db; /* Medium purple for subheadings */
+  font-size: 1.5em;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(147, 112, 219, 0.5); /* Subtle purple underline */
+  padding-bottom: 5px;
+}
+
+.farm-details-container p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.farm-details-container strong {
+  color: #bf40bf; /* Vibrant purple for strong text */
+}
+
+.farm-details-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.farm-details-container li {
+  background-color: rgba(42, 42, 74, 0.7); /* Darker background for list items */
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.farm-details-container input[type="number"],
+.farm-details-container input[type="text"] {
+  background-color: #3a3a5a; /* Dark input background */
+  border: 1px solid #9370db; /* Purple border */
+  color: #e0e0e0;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.farm-details-container input::placeholder {
+  color: #a0a0a0;
+}
+
+.farm-details-container button {
+  background: linear-gradient(145deg, #bf40bf, #9370db); /* Subtle purple gradient */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px; /* Slightly more rounded corners */
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(191, 64, 191, 0.4); /* Initial subtle glow */
+}
+
+.farm-details-container button:hover {
+  background: linear-gradient(145deg, #9370db, #bf40bf); /* Inverted gradient on hover */
+  box-shadow: 0 6px 20px rgba(191, 64, 191, 0.7); /* Enhanced glow on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.farm-details-container button:disabled {
+  background: #5a5a7a; /* Muted background for disabled */
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none;
+}
+
+.farm-details-container .message {
+  color: #e0e0e0;
+  font-size: 1.1em;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.farm-details-container .error-message {
+  color: #ff6b6b; /* Red for error messages */
+  font-weight: bold;
+}

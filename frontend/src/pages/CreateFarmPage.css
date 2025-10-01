@@ -1,0 +1,56 @@
+
+.create-farm-container {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent dark background */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(128, 0, 128, 0.4); /* Purple glow */
+  margin-top: 20px;
+  text-align: center;
+  color: #e0e0e0;
+}
+
+.create-farm-container h2 {
+  color: #bf40bf; /* Vibrant purple for heading */
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(191, 64, 191, 0.7);
+}
+
+.create-farm-container p {
+  font-size: 1.1em;
+  margin-bottom: 25px;
+}
+
+.create-farm-container button {
+  background: linear-gradient(145deg, #bf40bf, #9370db); /* Subtle purple gradient */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px; /* Slightly more rounded corners */
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(191, 64, 191, 0.4); /* Initial subtle glow */
+}
+
+.create-farm-container button:hover {
+  background: linear-gradient(145deg, #9370db, #bf40bf); /* Inverted gradient on hover */
+  box-shadow: 0 6px 20px rgba(191, 64, 191, 0.7); /* Enhanced glow on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.create-farm-container button:disabled {
+  background: #5a5a7a; /* Muted background for disabled */
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none;
+}
+
+.create-farm-container .connect-wallet-message {
+  color: #e0e0e0;
+  font-size: 1em;
+  margin-top: 20px;
+}
